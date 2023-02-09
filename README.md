@@ -1,5 +1,5 @@
 # Horizon-Vue
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/2023-02-09 10_20_04-frontend.png?raw=true)
+![alt text](https://github.com/dfoley84/Horizon-Vue/blob/main/frontend/assets/2023-02-09%2010_20_04-frontend.png?raw=true)
 
 # Actions Required
     1) PowerShell Script to pull Horizon VDI from Horizon to Database, 
