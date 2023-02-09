@@ -34,6 +34,14 @@ def get_db():
     finally:
         db.close()
 
+#Search for a specific User
+@app.get("/horizon")
+async def HorizonServers(
+    db: Session = Depends(get_db)
+): 
+    response_object = {'status': 'success'}
+    response_object['vdesks']  = db.query(models.Horizon).all()
+    return JSONResponse(content=jsonable_encoder(response_object))
 
 #Search for a specific User
 @app.post("/searchdata")
