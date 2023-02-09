@@ -4,6 +4,7 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import SessionLocal
+from rabbitmq import RabbitMQ_Sender
 import models
 import json
 
