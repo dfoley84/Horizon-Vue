@@ -60,6 +60,10 @@ async def HorizonServers(
 @app.post("/powercycle")
 async def selectedMachine(item: dict):
     message = json.loads(json.dumps(item, indent=2))
+  
+  
     print(message['data']['PowerCycle'])
     print(message['data']['vDesk']['MachineName'])
+    
+    RabbitMQ_Sender(message) #Passing Message to Class RabbitMQ_Sender
     return JSONResponse(content=jsonable_encoder({'status': 'success'}))
