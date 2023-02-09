@@ -2,8 +2,8 @@
 ![alt text](https://github.com/dfoley84/Horizon-Vue/blob/main/frontend/assets/2023-02-09%2010_20_04-frontend.png?raw=true)
 
 
-#Horizon Portal
-Portal to all end users to powercycle their virtual Horzion VDI's
+# Horizon Portal
+Portal to allow end users to powercycle their virtual Horzion VDI's
 while also allowing them to RDP/SSH into their Machines from within the Console
 
 # Actions Required
