@@ -1,32 +1,21 @@
 import logging
 import paramiko
 import asyncio
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, WebSocket, APIRouter, WebSocketDisconnect
+from fastapi.responses import JSONResponse
+from fastapi.encoders import jsonable_encoder
+from sqlalchemy.orm import Session
+import models
 
-from horizon import router as HorizonRouter
-from powercycle import router as PowerCycleRouter
-from search import router as SearchRouter
 
-logging.basicConfig(level=logging.INFO)
-app = FastAPI()
+from dbconnect import DatabaseManager
 
-# Add CORS middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:8080"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-app.include_router(HorizonRouter, prefix='/vdesk', tags=['Horizon'])
-app.include_router(PowerCycleRouter, prefix='/powercycle', tags=['PowerCycle'])
-app.include_router(SearchRouter, prefix='/search', tags=['Search'])
+router = APIRouter()
 
 
 
-@app.websocket("/ws")
+
+@router.websocket("/")
 async def websocket_endpoint(websocket: WebSocket):
     print("WebSocket route accessed") 
     await websocket.accept()
@@ -35,7 +24,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
     try:
         print("Before SSH connect")
-        ssh_client.connect('', port=22, username='', password='')  #Needs to be updated to pass IP Address, Username from DB Query
+        ssh_client.connect('172.31.165.88', port=22, username='dfoley', password='sony84')
         print("Connected to SSH")
     except Exception as e:
         logging.error(f"Error connecting to SSH: {e}")
