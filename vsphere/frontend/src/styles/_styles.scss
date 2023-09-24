@@ -1,0 +1,264 @@
+/* Resets and basic elements */
+html > body {
+  margin: 0 !important;
+}
+
+.main-section {
+  padding: 1rem;
+}
+
+.notification pre {
+  background-color: inherit;
+  color: white;
+  font-size: 16px;
+  line-height: normal;
+}
+
+div.color-line {
+  width: 160px;
+  height: 8px;
+  border: 1px #dbdbdb solid;
+  margin: 8px 0;
+}
+
+/* Typography */
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  word-break: break-word;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  word-break: break-word;
+}
+
+/* Navigation */
+header {
+  font-weight: bold;
+  font-family: Arial;
+}
+
+header span {
+  letter-spacing: 0px;
+}
+
+header span.tour,
+header span.of,
+header span.heroes {
+  color: rgb(234, 230, 240);
+}
+
+header .navbar-item.nav-home {
+  border: 3px solid transparent;
+  border-radius: 0%;
+}
+
+
+header .fab {
+  font-size: 24px;
+}
+
+header .fab.js-logo {
+  color: white;
+}
+
+header .buttons {
+  a {
+    margin-right: 10px;   // Adjust as needed for the desired spacing between links.
+    &:last-child {
+      margin-right: 0;   // Ensure the last link doesn't have unnecessary margin to the right.
+    }
+  }
+}
+header .buttons .header-icon i {
+  color: #fff;  // Set color to white
+  margin: 20px 10px;  // Maintain spacing as per your previous styles
+}
+
+header .buttons .header-icon i:hover {
+  color: $primary-light; // Apply the hover effect (taken from your GitHub & Twitter styles)
+}
+
+header .buttons i.fab {
+  color: #fff;
+  margin: 20px 10px;
+}
+
+header .buttons .header-icon.user-text {
+  color: #18BC9C;  // Set color to white
+  margin: 20px 10px;  // Maintain spacing as per your previous styles
+  line-height: 2em;  // To align it vertically with the icons
+
+  &:hover {
+    color: $primary-light; // Apply the hover effect (taken from your GitHub & Twitter styles)
+  }
+}
+
+
+header .buttons i.fab:hover {
+  color: $primary-light;
+}
+header .buttons .user-name {
+  line-height: 2em; // Adjust to vertically align the username with the icons
+  margin-left: 10px; // Spaces it out from the preceding icon
+}
+
+/* Components */
+.edit-detail .input[readonly] {
+  background-color: $shade-light;
+}
+
+.content-title-group {
+  margin-bottom: 16px;
+}
+
+.content-title-group h2 {
+  border-left: 16px solid $primary;
+  border-bottom: 2px solid $primary;
+  padding: 8px 16px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #555;
+  letter-spacing: 0px;
+}
+
+.content-title-group h2:hover {
+  color: $link;
+}
+
+.content-title-group button.button {
+  border: 0;
+  color: #999;
+}
+
+.content-title-group button.button:hover {
+  color: $link;
+}
+
+ul.list {
+  box-shadow: none;
+}
+
+div.card-content {
+  background-color: $shade-light;
+}
+
+.card {
+  margin-bottom: 2em;
+    button.btn {
+    margin-right: 10px;   // Add margin to the right of each button
+
+    // Remove margin from the last button
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+label.label {
+  font-weight: normal;
+}
+
+p.card-header-title {
+  background-color: $primary;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+  display: block;
+  padding-left: 24px;
+}
+
+.card-footer button {
+  font-size: 16px;
+  color: #888;
+}
+
+.card-footer button:hover {
+  color: $link;
+}
+
+.modal-card-foot button {
+  display: inline-block;
+  width: 80px;
+}
+
+.modal-card-head,
+.modal-card-body {
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 0.75rem;
+}
+
+.navbar-burger {
+  margin-left: auto;
+}
+
+button.link {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input.invalid,
+textarea.invalid,
+select.invalid {
+  border-left: 10px red solid !important;
+}
+
+.list-item {
+  color: #000;
+}
+
+.list-item:hover,
+.list-item.is-active {
+  color: #fff;
+  background-color: #74992e;
+}
+
+.list-item.is-active {
+  border-radius: 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.login-needed-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // take the full height of the viewport
+  background-color: #f5f5f5; // a light grey background for distinction
+  font-size: 1.5em; // making the text a bit larger
+  color: #333; // dark grey color for the text
+  transition: background-color 0.3s; // smooth transition for background color changes
+
+  // Animation
+  animation: pulse 2s infinite; // 2 seconds per cycle, and it will repeat indefinitely
+
+  @keyframes pulse {
+      0% {
+          background-color: #f5f5f5;
+      }
+      50% {
+          background-color: #e0e0e0;  // change the color slightly at the halfway point
+      }
+      100% {
+          background-color: #f5f5f5;
+      }
+  }
+}
+
+
+.menu-list .active-link,
+.menu-list .router-link-active,
+.not-found i,
+.not-found .title,
+div.card-content .name,
+div.card-content .description,
+.card-footer button i {
+}
