@@ -1,5 +1,5 @@
 # Horizon-Vue
-![alt text](https://github.com/dfoley84/Horizon-Vue/blob/main/frontend/assets/2023-02-09%2010_20_04-frontend.png?raw=true)
+![alt text](https://github.com/dfoley84/Horizon-Vue/blob/main/vsphere/frontend/src/assets/2023-09-24%2016_12_39-search.py%20-%20Horizon%20-%20Visual%20Studio%20Code.png?raw=true)
 
 
 # Horizon Portal
