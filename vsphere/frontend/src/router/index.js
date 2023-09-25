@@ -21,6 +21,11 @@ const routes = [
     name: 'terminal',
     component: () => import(/* webpackChunkName: "terminal" */ '../views/TerminalView.vue'),
     meta: { hideUI: true }
+  },
+  {
+    path: '/build',
+    name: 'build',
+    component: () => import(/* webpackChunkName: "build" */ '../views/buildView.vue'),
   }
 ]
 
