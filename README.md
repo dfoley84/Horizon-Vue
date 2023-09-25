@@ -8,8 +8,9 @@ while also allowing users to connect to their VDI over horizon console, or ssh t
 
 # Actions Required
     1) PowerShell Script to pull Horizon VDI from Horizon to Database, 
-    2) Create Jenkins Free Style Jobs for Each PowerAction
+    2) update logic code -> only allow Admins access to Search / Build vDesks
+    3) Create Jenkins Free Style Jobs for Each PowerAction
     3) Configure RabbitMQ to Take PowerAction Required 
-    6) Python Script to Get Message and Trigger Remote Jenkins Job
+    6) Python Script to Get Message and Trigger Remote Jenkins -> Watcher for new messages. 
 
 
